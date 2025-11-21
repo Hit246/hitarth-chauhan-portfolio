@@ -124,18 +124,18 @@ const Skills: React.FC = () => {
 
         {/* Right: 3D Sphere */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.7 }}
           animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.8 }}
           className="h-[500px] w-full relative"
         >
           <Canvas
-            camera={{ position: [0, 0, 8], fov: 50 }}
+            camera={{ position: [0, 0, 8], fov: 80 }}
             dpr={[1, 2]}
             gl={{ alpha: true }}
             style={{ background: 'transparent' }}
           >
-            <ambientLight intensity={0.5} />
+            <ambientLight intensity={0.4} />
             <pointLight position={[10, 10, 10]} />
             <Cloud />
           </Canvas>
