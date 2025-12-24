@@ -1,20 +1,73 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+<img width="1200" height="475" alt="Portfolio Banner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run and deploy your AI Studio app
+# Hitarth Chauhan's Portfolio
 
-This contains everything you need to run your app locally.
+A modern, interactive portfolio website showcasing my skills, projects, and experience as a developer. Built with React, TypeScript, and Three.js for an immersive 3D experience.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1EHxXEWWgDkAyuW6Tv1R4mA2PomesWdie
+## 🚀 Features
 
-## Run Locally
+- **Hero Section**: Engaging introduction with smooth animations
+- **About**: Personal background and journey
+- **Skills**: Technical expertise and tools
+- **Projects**: Showcase of key projects with descriptions
+- **Contact**: Get in touch form with email integration
+- **3D Elements**: Interactive Three.js scenes for visual appeal
+- **Responsive Design**: Optimized for all devices
+- **Smooth Animations**: Powered by Framer Motion
 
-**Prerequisites:**  Node.js
+## 🛠️ Tech Stack
 
+- **Frontend**: React 19, TypeScript
+- **3D Graphics**: Three.js, @react-three/fiber, @react-three/drei
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Build Tool**: Vite
+- **Email Service**: EmailJS
+- **Intersection Observer**: React Intersection Observer
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 📋 Prerequisites
+
+- Node.js (version 16 or higher)
+- npm or yarn
+
+## 🏃‍♂️ Getting Started
+
+1. **Clone the repository**:
+   ```bash
+   git clone <repository-url>
+   cd hitarth-chauhan-portfolio
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser** and navigate to `http://localhost:5173`
+
+## 📦 Build for Production
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+## 📧 Contact
+
+Feel free to reach out via the contact form on the website or connect with me on [LinkedIn](https://linkedin.com/in/hitarthchauhan) / [GitHub](https://github.com/hitarthchauhan).
+
+---
+
+Built with ❤️ by Hitarth Chauhan
