@@ -27,3 +27,5 @@ dist-ssr
 
 # Local environment file
 .env
+
+/portfolio.html
