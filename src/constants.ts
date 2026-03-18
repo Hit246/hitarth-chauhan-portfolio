@@ -25,12 +25,12 @@ export const PERSONAL_INFO = {
 };
 
 export const SKILLS: Skill[] = [
-  { name: "React", level: 90 },
-  { name: "TypeScript", level: 70 },
-  { name: "Express.js", level: 70 },
-  { name: "Next.js", level: 70 },
+  { name: "React", level: 80 },
+  { name: "TypeScript", level: 65 },
+  { name: "Express.js", level: 50 },
+  { name: "Next.js", level: 60 },
   { name: "JavaScript", level: 90 },
-  { name: "Node.js", level: 85 },
+  { name: "Node.js", level: 80 },
   { name: "HTML5", level: 95 },
   { name: "CSS3", level: 90 },
   { name: "Git", level: 88 },
@@ -42,40 +42,10 @@ export const TOOLS = [
 ];
 
 export const LEARNING = [
-  "Next.js", "MongoDB", "Firebase", "JAVA"
+  "Next.js", "MongoDB", "Firebase", "TypeScript"
 ];
 
 export const PROJECTS: Project[] = [
-  {
-    title: "Imagera",
-    description: "A creative social platform to share and explore digital artworks. Features include likes-to-coins, redemption, and admin dashboard.",
-    technologies: ["React", "Sanity", "Tailwind", "EmailJS"],
-    category: "web",
-    image: `${BASE}imagera.jpg`,
-    github: "https://github.com/hit246",
-    live: "https://imagera-main.netlify.app",
-    featured: true
-  },
-  {
-    title: "Snapcast",
-    description: "A video-sharing app with transcript, secure auth, upload & watch feature built using modern full-stack tools.",
-    technologies: ["Next.js", "Bunny", "Google Cloud", "Drizzle ORM"],
-    category: "api",
-    image: `${BASE}snapcast.jpg`,
-    github: "https://github.com/hit246/snapcast",
-    live: "https://hrc-snapcast.vercel.app",
-    featured: true
-  },
-  {
-    title: "GSAP Demo (Velvet Pour)",
-    description: "Made for learning basic GSAP animations. Features animated scroll, transitions and smooth user experience.",
-    technologies: ["React", "GSAP", "Tailwind"],
-    category: "web",
-    image: `${BASE}Velvet-pour.png`,
-    github: "https://github.com/hit246",
-    live: "https://velvet-pour-gsap.netlify.app",
-    featured: false
-  },
   {
     title: "Foodash",
     description: "A local food delivery web app designed for Idar town. It allows users to browse restaurants, view menus, place orders, and track delivery. Built with a modern responsive UI and Firebase backend.",
@@ -93,9 +63,19 @@ export const PROJECTS: Project[] = [
     category: "api",
     image: `${BASE}careercraftai.jpg`,
     github: "https://github.com/hit246",
-    live: "https://carrercraftai.vercel.app",
+    live: "https://carrercraftai.tech",
     featured: true
-  }
+  },
+  {
+    title: "Shantanu Solutions",
+    description: "A professional web development agency website offering tailored web solutions for businesses. Features a clean service showcase, portfolio section, and client-facing contact flow with a modern responsive UI.",
+    technologies: ["Next.js", "React", "Tailwind CSS"],
+    category: "web",
+    image: `${BASE}shantanu-solutions.jpg`,
+    github: "https://github.com/hit246",
+    live: "https://shantanu-solutions.vercel.app",
+    featured: true
+  },
 ];
 
 export const FEATURES: Feature[] = [

@@ -1,79 +1,39 @@
-import React, { useMemo, useRef } from 'react';
+import React, { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Text, Float } from '@react-three/drei';
+import { Text, Stars } from '@react-three/drei';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { SKILLS, TOOLS, LEARNING } from '../../constants';
 import * as THREE from 'three';
 
-const Word: React.FC<{ text: string; position: THREE.Vector3; color: string }> = ({ text, position, color }) => {
+import NeuralNetwork from './SkillsAnim2_NeuralNetwork';
+
+const SkillLabel = ({ text, position, color }: { text: string; position: THREE.Vector3; color: string }) => {
   const ref = useRef<THREE.Group>(null);
 
   useFrame(({ camera }) => {
     if (ref.current) {
-      // Make text face the camera always, cancelling out parent rotation
-      ref.current.lookAt(camera.position);
+      ref.current.lookAt(camera.position); // always face camera
     }
   });
 
   return (
-    <Float floatIntensity={2} rotationIntensity={0}>
-      <group ref={ref} position={position}>
-        <Text
-          fontSize={0.5}
-          color={color}
-          anchorX="center"
-          anchorY="middle"
-          font="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjp-Ek-_EeA.woff"
-        >
-          {text}
-        </Text>
-      </group>
-    </Float>
-  );
-};
-
-const Cloud = ({ radius = 4 }: { radius?: number }) => {
-  const words = useMemo(() => {
-    const temp: any[] = [];
-    const allSkills = [...SKILLS.map(s => s.name), ...TOOLS, ...LEARNING];
-    const spherical = new THREE.Spherical();
-    const phiSpan = Math.PI / (allSkills.length + 1);
-    const thetaSpan = (Math.PI * 2) / allSkills.length;
-
-    for (let i = 0; i < allSkills.length; i++) {
-      // Distribute points on a sphere
-      spherical.set(radius, phiSpan * (i + 1), thetaSpan * i);
-      const pos = new THREE.Vector3().setFromSpherical(spherical);
-      const color = i < SKILLS.length ? '#6366F1' : (i < SKILLS.length + TOOLS.length ? '#06B6D4' : '#8B5CF6');
-      temp.push({ word: allSkills[i], pos, color });
-    }
-    return temp;
-  }, [radius]);
-
-  const groupRef = useRef<THREE.Group>(null);
-
-  useFrame((state, delta) => {
-    if (groupRef.current) {
-      groupRef.current.rotation.y += delta * 0.1;
-      groupRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.5) * 0.2;
-    }
-  });
-
-  return (
-    <group ref={groupRef}>
-      {words.map(({ word, pos, color }, i) => (
-        <Word key={i} position={pos} color={color} text={word} />
-      ))}
+    <group ref={ref} position={position}>
+      <Text
+        fontSize={0.18}
+        color={color}
+        anchorX="center"
+        anchorY="middle"
+        font="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjp-Ek-_EeA.woff"
+      >
+        {text}
+      </Text>
     </group>
   );
 };
 
 const Skills: React.FC = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
     <section id="skills" className="py-24 relative z-10 overflow-hidden">
@@ -122,24 +82,16 @@ const Skills: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Right: 3D Sphere */}
+        {/* Right: Skill Sphere */}
         <motion.div
           initial={{ opacity: 0, scale: 0.7 }}
           animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.8 }}
-          className="h-[500px] w-full relative"
+          className="h-[500px] w-full"
         >
-          <Canvas
-            camera={{ position: [0, 0, 8], fov: 80 }}
-            dpr={[1, 2]}
-            gl={{ alpha: true }}
-            style={{ background: 'transparent' }}
-          >
-            <ambientLight intensity={0.4} />
-            <pointLight position={[10, 10, 10]} />
-            <Cloud />
-          </Canvas>
+          <NeuralNetwork />
         </motion.div>
+
       </div>
     </section>
   );
