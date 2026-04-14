@@ -38,7 +38,7 @@ const NeuralNetwork: React.FC = () => {
             vy: (Math.random() - 0.5) * 0.5,
             label: s.name,
             color: s.color,
-            radius: 4,
+            radius: 10,
         }));
 
         const draw = () => {
@@ -75,11 +75,11 @@ const NeuralNetwork: React.FC = () => {
             // Draw nodes + labels
             nodes.forEach(n => {
                 // Glow
-                const grd = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, 14);
+                const grd = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, 28);
                 grd.addColorStop(0, n.color + 'aa');
                 grd.addColorStop(1, 'transparent');
                 ctx.beginPath();
-                ctx.arc(n.x, n.y, 14, 0, Math.PI * 2);
+                ctx.arc(n.x, n.y, 28, 0, Math.PI * 2);
                 ctx.fillStyle = grd;
                 ctx.fill();
 
@@ -90,7 +90,7 @@ const NeuralNetwork: React.FC = () => {
                 ctx.fill();
 
                 // Label
-                ctx.font = '600 11px monospace';
+                ctx.font = '600 28px monospace';
                 ctx.fillStyle = n.color;
                 ctx.textAlign = 'center';
                 ctx.fillText(n.label, n.x, n.y - 10);
