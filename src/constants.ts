@@ -47,23 +47,23 @@ export const LEARNING = [
 
 export const PROJECTS: Project[] = [
   {
-    title: "Foodash",
-    description: "A local food delivery web app designed for Idar town. It allows users to browse restaurants, view menus, place orders, and track delivery. Built with a modern responsive UI and Firebase backend.",
-    technologies: ["Next.js", "Firebase", "Tailwind CSS"],
-    category: "web",
-    image: `${BASE}foodash.jpg`,
-    github: "https://github.com/hit246",
-    live: "https://foodash-idar.vercel.app",
-    featured: true
-  },
-  {
     title: "CareerCraft AI",
     description: "An AI-powered career assistant that helps users craft professional resumes and cover letters. Features include ATS-Score Checker, job description analyzer, Resume builder and performance analytics for resume improvement.",
     technologies: ["Next.js", "Node.js", "Tailwind CSS", "Genkit AI"],
     category: "api",
-    image: `${BASE}careercraftai.jpg`,
+    image: `${BASE}careercraftai.png`,
     github: "https://github.com/hit246",
     live: "https://carrercraftai.tech",
+    featured: true
+  },
+  {
+    title: "Foodash",
+    description: "A local food delivery web app designed for Idar town. It allows users to browse restaurants, view menus, place orders, and track delivery. Built with a modern responsive UI and Firebase backend.",
+    technologies: ["Next.js", "Firebase", "Tailwind CSS"],
+    category: "web",
+    image: `${BASE}foodash.png`,
+    github: "https://github.com/hit246",
+    live: "https://foodash-idar.vercel.app",
     featured: true
   },
   {

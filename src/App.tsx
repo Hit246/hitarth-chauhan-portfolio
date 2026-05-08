@@ -23,21 +23,21 @@ function App() {
   }, []);
 
   return (
-    <div className="text-slate-200 min-h-screen relative selection:bg-primary/30 selection:text-white">
+    <div className="text-slate-200 min-h-screen relative selection:bg-primary/30 selection:text-white cursor-none">
       <AnimatePresence mode="wait">
         {loading && <Loader />}
       </AnimatePresence>
 
       <Cursor />
-      
+
       {!loading && (
         <>
           <Suspense fallback={null}>
-             <Scene />
+            <Scene />
           </Suspense>
 
           <Navbar />
-          
+
           <main className="relative z-10">
             <Hero />
             <About />
@@ -45,7 +45,7 @@ function App() {
             <Projects />
             <Contact />
           </main>
-          
+
           <Footer />
         </>
       )}
