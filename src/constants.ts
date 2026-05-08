@@ -42,39 +42,108 @@ export const TOOLS = [
 ];
 
 export const LEARNING = [
-  "Next.js", "MongoDB", "Firebase", "TypeScript"
+  "Advance React Patterns", "Advance TypeScript Concepts"
 ];
 
 export const PROJECTS: Project[] = [
   {
     title: "CareerCraft AI",
-    description: "An AI-powered career assistant that helps users craft professional resumes and cover letters. Features include ATS-Score Checker, job description analyzer, Resume builder and performance analytics for resume improvement.",
-    technologies: ["Next.js", "Node.js", "Tailwind CSS", "Genkit AI"],
+
+    description:
+      "An AI-powered career assistant that helps users craft professional resumes and cover letters. Features include ATS-Score Checker, job description analyzer, Resume builder and performance analytics for resume improvement.",
+
+    technologies: [
+      "Next.js",
+      "Node.js",
+      "Tailwind CSS",
+      "Genkit AI",
+    ],
+
     category: "api",
+
     image: `${BASE}careercraftai.png`,
-    github: "https://github.com/hit246",
+
+    github: "https://github.com/Hit246",
+
     live: "https://carrercraftai.tech",
-    featured: true
+
+    featured: true,
+
+    badge: "AI Powered",
+
+    buttonText: "Launch AI Platform",
+
+    gradient:
+      "from-violet-600 to-indigo-500 shadow-violet-500/30",
+
+    githubStyle:
+      "bg-violet-500/10 border-violet-500/20 hover:bg-violet-500/20",
   },
+
   {
     title: "Foodash",
-    description: "A local food delivery web app designed for Idar town. It allows users to browse restaurants, view menus, place orders, and track delivery. Built with a modern responsive UI and Firebase backend.",
-    technologies: ["Next.js", "Firebase", "Tailwind CSS"],
+
+    description:
+      "A local food delivery web app designed for Idar town. It allows users to browse restaurants, view menus, place orders, and track delivery. Built with a modern responsive UI and Firebase backend.",
+
+    technologies: [
+      "Next.js",
+      "Firebase",
+      "Tailwind CSS",
+    ],
+
     category: "web",
+
     image: `${BASE}foodash.png`,
-    github: "https://github.com/hit246",
+
+    github: "https://github.com/Hit246",
+
     live: "https://foodash-idar.vercel.app",
-    featured: true
+
+    featured: true,
+
+    badge: "Live Delivery",
+
+    buttonText: "Order Experience",
+
+    gradient:
+      "from-orange-500 to-red-500 shadow-orange-500/30",
+
+    githubStyle:
+      "bg-orange-500/10 border-orange-500/20 hover:bg-orange-500/20",
   },
+
   {
     title: "Shantanu Solutions",
-    description: "A professional web development agency website offering tailored web solutions for businesses. Features a clean service showcase, portfolio section, and client-facing contact flow with a modern responsive UI.",
-    technologies: ["Next.js", "React", "Tailwind CSS"],
+
+    description:
+      "A professional web development agency website offering tailored web solutions for businesses. Features a clean service showcase, portfolio section, and client-facing contact flow with a modern responsive UI.",
+
+    technologies: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+    ],
+
     category: "web",
+
     image: `${BASE}shantanu-solutions.jpg`,
-    github: "https://github.com/hit246",
+
+    github: "https://github.com/Hit246",
+
     live: "https://shantanu-solutions.vercel.app",
-    featured: true
+
+    featured: true,
+
+    badge: "Client Project",
+
+    buttonText: "View Website",
+
+    gradient:
+      "from-blue-600 to-cyan-500 shadow-blue-500/20",
+
+    githubStyle:
+      "bg-blue-500/10 border-blue-500/20 hover:bg-blue-500/20",
   },
 ];
 

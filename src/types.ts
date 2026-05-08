@@ -2,15 +2,29 @@ import { ReactNode } from 'react';
 
 export interface Project {
   title: string;
-  description: string;
-  technologies: string[];
-  category: 'web' | 'api' | 'mobile';
-  image: string;
-  github: string;
-  live: string;
-  featured: boolean;
-}
 
+  description: string;
+
+  technologies: string[];
+
+  category: 'web' | 'api';
+
+  image: string;
+
+  github: string;
+
+  live: string;
+
+  featured: boolean;
+
+  badge?: string;
+
+  buttonText?: string;
+
+  gradient?: string;
+
+  githubStyle?: string;
+}
 export interface Skill {
   name: string;
   level: number;
