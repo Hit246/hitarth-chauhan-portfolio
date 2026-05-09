@@ -25,9 +25,6 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
           <p>© {new Date().getFullYear()} Hitarth Chauhan. All rights reserved.</p>
-          <p className="flex items-center mt-2 md:mt-0">
-            Made with <Heart size={14} className="text-red-500 mx-1 fill-red-500" /> using React & Three.js
-          </p>
         </div>
       </div>
     </footer>

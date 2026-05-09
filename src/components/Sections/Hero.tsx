@@ -49,13 +49,13 @@ const Hero: React.FC = () => {
           >
             <a
               href="#projects"
-              className="px-8 py-3 rounded-full bg-primary text-white font-medium hover:bg-primary/90 transition-all hover:scale-105 shadow-lg shadow-primary/25"
+              className="px-8 py-3 rounded-full bg-primary text-white font-medium hover:bg-primary/90 transition-all hover:scale-105 shadow-lg shadow-primary/25 cursor-none"
             >
               View Work
             </a>
             <a
               href="#contact"
-              className="px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white font-medium hover:bg-white/10 transition-all hover:scale-105 flex items-center gap-2 backdrop-blur-sm"
+              className="px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white font-medium hover:bg-white/10 transition-all hover:scale-105 flex items-center gap-2 backdrop-blur-sm cursor-none"
             >
               <Mail size={18} /> Contact Me
             </a>

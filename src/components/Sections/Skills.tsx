@@ -87,7 +87,7 @@ const Skills: React.FC = () => {
           initial={{ opacity: 0, scale: 0.7 }}
           animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.8 }}
-          className="h-[500px] w-full"
+          className="hidden md:block h-[500px] w-full"
         >
           <NeuralNetwork />
         </motion.div>

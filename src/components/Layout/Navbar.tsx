@@ -28,9 +28,8 @@ const Navbar: React.FC = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? 'py-4 glass-card border-b border-white/10' : 'py-6 bg-transparent'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'py-4 glass-card border-b border-white/10' : 'py-6 bg-transparent'
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <a href="#" className="relative z-50 group">
@@ -45,7 +44,7 @@ const Navbar: React.FC = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-slate-300 hover:text-white transition-colors relative group"
+                className="text-sm font-medium text-slate-300 hover:text-white transition-colors relative group cursor-none"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
@@ -53,7 +52,7 @@ const Navbar: React.FC = () => {
             ))}
             <a
               href={PERSONAL_INFO.resume}
-              className="px-5 py-2 rounded-full bg-primary/20 text-primary border border-primary/50 hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105"
+              className="px-5 py-2 rounded-full bg-primary/20 text-primary border border-primary/50 hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105 cursor-none"
             >
               Resume
             </a>
@@ -61,7 +60,7 @@ const Navbar: React.FC = () => {
 
           {/* Mobile Toggle */}
           <button
-            className="md:hidden relative z-50 text-white"
+            className="md:hidden relative z-50 text-white cursor-none"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -90,13 +89,13 @@ const Navbar: React.FC = () => {
               </a>
             ))}
             <a
-               href={PERSONAL_INFO.resume}
-               onClick={() => setIsOpen(false)}
-               className="px-8 py-3 rounded-full bg-primary text-white font-medium hover:bg-primary/80 transition-colors"
+              href={PERSONAL_INFO.resume}
+              onClick={() => setIsOpen(false)}
+              className="px-8 py-3 rounded-full bg-primary text-white font-medium hover:bg-primary/80 transition-colors cursor-none"
             >
               Resume
             </a>
-            
+
             <div className="flex space-x-6 mt-8">
               <a href={PERSONAL_INFO.social.github} target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white">
                 <Github size={24} />

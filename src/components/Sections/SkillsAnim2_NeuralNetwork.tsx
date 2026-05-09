@@ -30,15 +30,23 @@ const NeuralNetwork: React.FC = () => {
         canvas.width = W;
         canvas.height = H;
 
+        // Responsive sizing based on screen width
+        const isMobile = W < 768;
+        const fontSize = isMobile ? 12 : 28;
+        const nodeRadius = isMobile ? 6 : 10;
+        const glowRadius = isMobile ? 14 : 28;
+        const connectionDistance = isMobile ? 80 : 120;
+        const speedMultiplier = isMobile ? 0.3 : 0.5;
+
         // Init nodes
         nodesRef.current = allSkills.map(s => ({
             x: Math.random() * W,
             y: Math.random() * H,
-            vx: (Math.random() - 0.5) * 0.5,
-            vy: (Math.random() - 0.5) * 0.5,
+            vx: (Math.random() - 0.5) * speedMultiplier,
+            vy: (Math.random() - 0.5) * speedMultiplier,
             label: s.name,
             color: s.color,
-            radius: 10,
+            radius: nodeRadius,
         }));
 
         const draw = () => {
@@ -60,8 +68,8 @@ const NeuralNetwork: React.FC = () => {
                     const dx = nodes[i].x - nodes[j].x;
                     const dy = nodes[i].y - nodes[j].y;
                     const dist = Math.sqrt(dx * dx + dy * dy);
-                    if (dist < 120) {
-                        const alpha = (1 - dist / 120) * 0.4;
+                    if (dist < connectionDistance) {
+                        const alpha = (1 - dist / connectionDistance) * 0.4;
                         ctx.beginPath();
                         ctx.moveTo(nodes[i].x, nodes[i].y);
                         ctx.lineTo(nodes[j].x, nodes[j].y);
@@ -75,11 +83,11 @@ const NeuralNetwork: React.FC = () => {
             // Draw nodes + labels
             nodes.forEach(n => {
                 // Glow
-                const grd = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, 28);
+                const grd = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, glowRadius);
                 grd.addColorStop(0, n.color + 'aa');
                 grd.addColorStop(1, 'transparent');
                 ctx.beginPath();
-                ctx.arc(n.x, n.y, 28, 0, Math.PI * 2);
+                ctx.arc(n.x, n.y, glowRadius, 0, Math.PI * 2);
                 ctx.fillStyle = grd;
                 ctx.fill();
 
@@ -90,10 +98,10 @@ const NeuralNetwork: React.FC = () => {
                 ctx.fill();
 
                 // Label
-                ctx.font = '600 28px monospace';
+                ctx.font = `600 ${fontSize}px monospace`;
                 ctx.fillStyle = n.color;
                 ctx.textAlign = 'center';
-                ctx.fillText(n.label, n.x, n.y - 10);
+                ctx.fillText(n.label, n.x, n.y - (isMobile ? 4 : 10));
             });
 
             rafRef.current = requestAnimationFrame(draw);

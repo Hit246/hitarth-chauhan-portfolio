@@ -105,8 +105,9 @@ const Projects = () => {
                         hover:scale-[1.02]
                         transition-all duration-300
                         flex items-center justify-center gap-2
-                        text-white font-medium
+                        text-white font-medium 
                         shadow-lg
+                        cursor-none
                       `}
                     >
                       <ExternalLink size={16} />
@@ -121,6 +122,7 @@ const Projects = () => {
                         w-11 h-11 rounded-xl border
                         transition flex items-center justify-center text-white
                         ${project.githubStyle}
+                        cursor-none
                       `}
                     >
                       <Github size={18} />
