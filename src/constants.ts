@@ -74,10 +74,10 @@ export const PROJECTS: Project[] = [
     buttonText: "Launch AI Platform",
 
     gradient:
-      "from-violet-600 to-indigo-500 shadow-violet-500/30",
+      "from-emerald-500 to-green-600 shadow-emerald-500/20",
 
     githubStyle:
-      "bg-violet-500/10 border-violet-500/20 hover:bg-violet-500/20",
+      "bg-emerald-500/10 border-emerald-500/20 hover:bg-emerald-500/20",
   },
 
   {
@@ -107,10 +107,10 @@ export const PROJECTS: Project[] = [
     buttonText: "Order Experience",
 
     gradient:
-      "from-orange-500 to-red-500 shadow-orange-500/30",
+      "from-green-500 to-emerald-600 shadow-green-500/20",
 
     githubStyle:
-      "bg-orange-500/10 border-orange-500/20 hover:bg-orange-500/20",
+      "bg-green-500/10 border-green-500/20 hover:bg-green-500/20",
   },
 
   {
@@ -140,10 +140,10 @@ export const PROJECTS: Project[] = [
     buttonText: "View Website",
 
     gradient:
-      "from-blue-600 to-cyan-500 shadow-blue-500/20",
+      "from-emerald-600 to-lime-500 shadow-emerald-600/20",
 
     githubStyle:
-      "bg-blue-500/10 border-blue-500/20 hover:bg-blue-500/20",
+      "bg-emerald-500/10 border-emerald-500/20 hover:bg-emerald-500/20",
   },
 ];
 

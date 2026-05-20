@@ -15,9 +15,9 @@ const NeuralNetwork: React.FC = () => {
     const rafRef = useRef<number>(0);
 
     const allSkills = [
-        ...SKILLS.map(s => ({ name: s.name, color: '#818cf8' })),
-        ...TOOLS.map(t => ({ name: t, color: '#67e8f9' })),
-        ...LEARNING.map(l => ({ name: l, color: '#c084fc' })),
+        ...SKILLS.map(s => ({ name: s.name, color: '#00F5A0' })),
+        ...TOOLS.map(t => ({ name: t, color: '#10B981' })),
+        ...LEARNING.map(l => ({ name: l, color: '#A3E635' })),
     ];
 
     useEffect(() => {
@@ -73,7 +73,7 @@ const NeuralNetwork: React.FC = () => {
                         ctx.beginPath();
                         ctx.moveTo(nodes[i].x, nodes[i].y);
                         ctx.lineTo(nodes[j].x, nodes[j].y);
-                        ctx.strokeStyle = `rgba(129, 140, 248, ${alpha})`;
+                        ctx.strokeStyle = `rgba(0, 245, 160, ${alpha})`;
                         ctx.lineWidth = 0.8;
                         ctx.stroke();
                     }

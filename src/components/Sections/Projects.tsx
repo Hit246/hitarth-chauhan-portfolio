@@ -13,7 +13,7 @@ const Projects = () => {
 
         {/* Header */}
         <div className="mb-16">
-          <p className="text-sm tracking-[0.3em] text-cyan-400 mb-3">
+          <p className="text-sm tracking-[0.3em] text-primary mb-3">
             PORTFOLIO
           </p>
 
@@ -38,7 +38,7 @@ const Projects = () => {
               className="group"
             >
               {/* Card */}
-              <div className="rounded-3xl overflow-hidden border border-white/10 bg-[#0b1120]">
+              <div className="rounded-3xl overflow-hidden border border-white/10 glass-card bg-[#161615]/80">
 
                 {/* Image */}
                 <div className="relative aspect-[16/10] overflow-hidden">
@@ -62,7 +62,7 @@ const Projects = () => {
                   {/* Featured */}
                   {project.featured && (
                     <div className="absolute bottom-4 left-4 z-20">
-                      <span className="px-3 py-1 rounded-full text-xs font-medium bg-cyan-500/20 border border-cyan-400/30 text-cyan-300 backdrop-blur-md">
+                      <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/20 border border-primary/30 text-primary backdrop-blur-md">
                         {project.badge}
                       </span>
                     </div>
