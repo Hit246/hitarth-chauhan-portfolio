@@ -6,6 +6,7 @@ import Loader from './components/Layout/Loader';
 import Cursor from './components/Layout/Cursor';
 import Hero from './components/Sections/Hero';
 import About from './components/Sections/About';
+import Experience from './components/Sections/Experience';
 import Skills from './components/Sections/Skills';
 import Projects from './components/Sections/Projects';
 import Contact from './components/Sections/Contact';
@@ -41,6 +42,7 @@ function App() {
           <main className="relative z-10">
             <Hero />
             <About />
+            <Experience />
             <Skills />
             <Projects />
             <Contact />

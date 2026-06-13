@@ -1,4 +1,4 @@
-import { Project, Skill, Feature } from './types';
+import { Project, Skill, Feature, Experience } from './types';
 
 // Ensure public asset paths respect Vite base URL (useful when deployed to a subpath)
 const BASE = (import.meta && import.meta.env && import.meta.env.BASE_URL) ? import.meta.env.BASE_URL : '/';
@@ -161,3 +161,31 @@ export const FEATURES: Feature[] = [
     description: "Creative solutions to complex problems with modern approaches."
   }
 ];
+
+export const EXPERIENCES: Experience[] = [
+  {
+    role: "Google Student Ambassador",
+    company: "Google",
+    period: "June 2026 - Present",
+    description: [
+      "Serving as a key point of contact between Google and the student developer community on campus.",
+      "Hosting technical workshops, developer group sessions, and hackathons focusing on modern frameworks, Google Cloud, Firebase, and AI technologies.",
+      "Fostering collaboration and peer-to-peer learning by sharing opportunities, Google certifications, and resources."
+    ],
+    technologies: ["Community Leadership", "Google Technologies", "Event Organization", "Technical Writing", "Public Speaking"]
+  },
+  {
+    role: "Full Stack Developer",
+    company: "Freelance",
+    period: "Aug 2025 – Mar 2026",
+    description: [
+      "Led full-stack development for 3+ web applications using Next.js, Firebase, and Genkit AI, delivering all projects on schedule.",
+      "Designed and built RESTful APIs integrated with React.js frontends, reducing feature development time by 25%.",
+      "Implemented scalable data models and real-time syncing with Firebase Firestore across multiple production apps.",
+      "Collaborated in Agile/Scrum team, participating in sprint planning, daily standups, and code reviews.",
+      "Set up CI/CD workflows for automated testing, builds, and deployment pipelines."
+    ],
+    technologies: ["Next.js", "Firebase", "Genkit AI", "React.js", "RESTful APIs", "CI/CD", "Agile"]
+  }
+];
+
